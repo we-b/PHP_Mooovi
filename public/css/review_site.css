@@ -3743,7 +3743,8 @@ a:hover .thumbnail__figure {
   width: 90%; }
 
 .thumbnail--movies .thumbnail__figure:after {
-  background-image: url(../images/icons/icon-movie-poster.png); }
+  /* background-image: url(../images/icons/icon-movie-poster.png);  */
+}
 
 .thumbnail--news .thumbnail__figure {
   background-position: 50% 0%; }

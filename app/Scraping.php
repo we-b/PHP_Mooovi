@@ -12,7 +12,7 @@ class Scraping
 
         $links = array();
         $current_page = file_get_html('http://review-movie.herokuapp.com/');
-        $elements = $current_page->fine('.entry-title a');
+        $elements = $current_page->find('.entry-title a');
         foreach ($elements as $element) {
             $links[] = $element->href;
         }
@@ -27,6 +27,10 @@ class Scraping
         $page = file_get_html($link);
         $title = $page->find('.entry-title')[0]->plaintext;
         $image_url = $page->find('.entry-content img')[0]->src;
-        $product = new Product(array('title' => $title, 'image_url' => $image_url));
+
+        // $product = new Product(array('title' => $title, 'image_url' => $image_url));
+        // $product->save();
+
+        $product = Product::firstOrNew(['title' => $title, 'image_url' => $image_url]);
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Console\Commands;
 
 use Illuminate\Console\Command;
+use App\Scraping;
 
 class MovieScraping extends Command
 {
@@ -37,6 +38,6 @@ class MovieScraping extends Command
      */
     public function handle()
     {
-        //
+        Scraping::movie_urls();
     }
 }

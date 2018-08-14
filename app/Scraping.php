@@ -41,7 +41,14 @@ class Scraping
         $page = file_get_html($link);
         $title = $page->find('.entry-title')[0]->plaintext;
         $image_url = $page->find('.entry-content img')[0]->src;
+        $director = $page->find('.director span')[0]->plaintext;
+        $detail = $page->find('.entry-content p')[0]->plaintext;
+        $open_date = $page->find('.date span')[0]->plaintext;
+
         $product = Product::firstOrNew(['title' => $title, 'image_url' => $image_url]);
+        $product->director = $director;
+        $product->detail = $detail;
+        $product->open_date = $open_date;
         $product->save();
     }
 }

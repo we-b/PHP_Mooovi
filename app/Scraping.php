@@ -11,11 +11,25 @@ class Scraping
         require_once 'simple_html_dom.php';
 
         $links = array();
-        $current_page = file_get_html('http://review-movie.herokuapp.com/');
-        $elements = $current_page->find('.entry-title a');
-        foreach ($elements as $element) {
-            $links[] = $element->href;
+        $next_url = "";
+
+        while (true) {
+            $current_page = file_get_html('http://review-movie.herokuapp.com/' . $next_url);
+            $elements = $current_page->find('.entry-title a');
+            foreach ($elements as $element) {
+                $links[] = $element->href;
+            }
+
+            $next_link = $current_page->find('.pagination .next a');
+
+
+            if (!$next_link) {
+                break;
+            }
+
+            $next_url = $next_link[0]->href;
         }
+
 
         foreach ($links as $link) {
             Scraping::get_product('http://review-movie.herokuapp.com/' . $link);
@@ -27,10 +41,7 @@ class Scraping
         $page = file_get_html($link);
         $title = $page->find('.entry-title')[0]->plaintext;
         $image_url = $page->find('.entry-content img')[0]->src;
-
-        // $product = new Product(array('title' => $title, 'image_url' => $image_url));
-        // $product->save();
-
         $product = Product::firstOrNew(['title' => $title, 'image_url' => $image_url]);
+        $product->save();
     }
 }

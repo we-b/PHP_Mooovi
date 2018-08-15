@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="pc" lang="ja" xmlns:fb="http://ogp.me/ns/fb#" xmlns:og="http://ogp.me/ns#">
 <head>
-    <meta charset="utf-8"></meta>
+    <meta charset="utf-8">
     <title>映画レビューサイト</title>
     <link href="{{ asset('css/review_site.css')}}" rel='stylesheet' type='text/css'>
     <link href="{{ asset('css/font-awesome.css')}}" rel='stylesheet' type='text/css'>

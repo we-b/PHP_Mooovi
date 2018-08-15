@@ -16,8 +16,14 @@ class ReviewsController extends Controller
         return view('reviews.create')->with(['product' => $product, 'review' => $review]);
     }
 
-    public function store()
+    public function store(Request $request, $product_id)
     {
-        return redirect('/products');
+        Review::create([
+          'nickname' => $request->nickname,
+          'rate' => $request->rate,
+          'review' => $request->review,
+          'product_id' => $product_id,
+        ]);
+        return redirect('/');
     }
 }

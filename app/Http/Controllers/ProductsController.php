@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Product;
 
-class ProductsController extends Controller
+class ProductsController extends RankingController
 {
     public function index()
     {

@@ -13,10 +13,10 @@ class ProductsController extends Controller
         return view('products.index')->with('products', $products);
     }
 
-    public function show()
+    public function show($product_id)
     {
-        $product = array();
-        return view('products.show')->with('product', product);
+        $product = Product::find($product_id);
+        return view('products.show')->with('product', $product);
     }
 
     public function search()

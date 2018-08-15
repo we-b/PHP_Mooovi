@@ -38,7 +38,7 @@
             </div>
           </div>
 
-          {{ Form::model($review, array('action' => ['ReviewsControler@store', $product->id])) }}
+          {{ Form::model($review, ['action' => ['ReviewsController@store', $product->id]]) }}
             <div style="margin: 8px 0">
               {{ Form::label('nickname', 'ニックネーム', ['style' => 'margin-right: 8px;']) }}
               {{ Form::text('nickname') }}
@@ -48,7 +48,7 @@
               {{ Form::selectRange('rate', 1, 10, ['placeholder' => '評価', 'class' => 'search__query', 'style' => 'text-align: right;']) }}
             </div>
             <div style="margin: 8px 0">
-              {{ Form::textarea('review', '', ['placeholder' => 'レビューを書いてね!', 'style' => 'width: 100px;height: 300px;']) }}
+              {{ Form::textarea('review', '', ['placeholder' => 'レビューを書いてね!', 'style' => 'width: 100%;height: 300px;']) }}
             </div>
             <div class="row">
               <div class="col10 push1">

@@ -19,9 +19,9 @@ class ProductsController extends Controller
         return view('products.show')->with('product', $product);
     }
 
-    public function search()
+    public function search(Request $request)
     {
-        $products = array();
+        $products = Product::where('title', 'LIKE', "%{$request->keyword}%")->take(20)->get();
         return view('products.search')->with('products', $products);
     }
 }

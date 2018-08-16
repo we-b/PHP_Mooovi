@@ -7,6 +7,13 @@ use App\Product;
 
 class ProductsController extends RankingController
 {
+
+    public function __construct()
+    {
+        parent::__construct();
+        $this->middleware('auth', ['only' => 'search']);
+    }
+
     public function index()
     {
         $products = Product::orderBy('id', 'ASC')->take(20)->get();

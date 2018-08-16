@@ -6,7 +6,7 @@
     <div class="yjContainer">
       <div class="form_box">
         <h2>mooovi<span>新規登録</span></h2>
-         {!! Form::open(array()) !!}
+        {!! Form::open(array('files' => true)) !!}
           @if (count($errors) > 0)
             <div id="error_explanation">
               <ul>
@@ -27,6 +27,13 @@
           <div class="label">
             {{ Form::label('password_confirmation') }}
             {{ Form::password('password_confirmation', ['placeholder' => 'パスワードを入力（確認）']) }}
+          </div>
+          <div class="label">
+            {{ Form::label('name') }}
+            {{ Form::text('name') }}
+          </div>
+          <div class="field">
+            {{ Form::file('avatar') }}
           </div>
 
           <div class="submit">

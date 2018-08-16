@@ -30,7 +30,8 @@ class AddUserIdToReviewsTable extends Migration
     public function down()
     {
         Schema::table('reviews', function (Blueprint $table) {
-            //
+            $table->dropForeign('reviews_user_id_foreign');
+            $table->dropColumn('user_id');
         });
     }
 }

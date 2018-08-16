@@ -26,7 +26,7 @@ class RemoveNicknameFromReviewsTable extends Migration
     public function down()
     {
         Schema::table('reviews', function (Blueprint $table) {
-            //
+            $table->string('nickname');
         });
     }
 }

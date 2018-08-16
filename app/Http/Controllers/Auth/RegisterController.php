@@ -64,7 +64,7 @@ class RegisterController extends Controller
     {
 
         $request = app('request');
-        $path = $request->file('avatar')->store('avatars');
+        $path = $request->file('avatar')->store('avatars', 'public');
 
         return User::create([
             'name' => $data['name'],

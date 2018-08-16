@@ -30,8 +30,10 @@
           <i class="fa fa-hand-o-up color-gray-light"></i>投稿ランキング
         </h4>
         <ul class="listview listview--condensed text-small">
-          {{-- */$i = 1/* --}}
-          @foreach (array() as $product)
+          @php
+            $i = 1;
+          @endphp
+          @foreach ($ranking as $product)
             <li data-cinema-id="346394">
               <a href="/products/{{ $product->id }}">
                 <div class="box">
@@ -49,7 +51,9 @@
                 </div>
               </a>
             </li>
-            {{-- */$i++/* --}}
+          @php
+            $i++;
+          @endphp
           @endforeach
         </ul>
       </aside>

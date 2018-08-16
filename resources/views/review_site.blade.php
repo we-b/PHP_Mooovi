@@ -15,6 +15,16 @@
             <li class="logo" style="float: left">
               <a href="/">mooovi</a>
             </li>
+            <li class="entry_button">
+              <a href="{{ route('logout') }}"
+                  onclick="event.preventDefault();
+                           document.getElementById('logout-form').submit();">
+                  サインアウト
+              </a>
+              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  {{ csrf_field() }}
+              </form>
+            </li>
             <li class="entry_button" style="float: right">
               <a href="/products/search">投稿する</a>
             </li>

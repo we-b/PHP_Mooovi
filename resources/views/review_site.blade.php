@@ -33,7 +33,6 @@
           @php
             $i = 1;
           @endphp
-
           @foreach ($ranking as $product)
             <li data-cinema-id="346394">
               <a href="/products/{{ $product->id }}">

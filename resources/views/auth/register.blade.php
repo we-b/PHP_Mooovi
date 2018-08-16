@@ -30,7 +30,7 @@
           </div>
           <div class="label">
             {{ Form::label('name') }}
-            {{ Form::text('name') }}
+            {{ Form::text('name', '', ['placeholder' => 'ニックネームを入力(必須)']) }}
           </div>
           <div class="field">
             {{ Form::file('avatar') }}

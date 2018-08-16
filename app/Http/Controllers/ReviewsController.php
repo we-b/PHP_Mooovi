@@ -27,7 +27,7 @@ class ReviewsController extends RankingController
     public function store(Request $request, $product_id)
     {
         Review::create([
-          'nickname' => Auth::user()->name,
+          'user_id' => Auth::user()->id,
           'rate' => $request->rate,
           'review' => $request->review,
           'product_id' => $product_id,

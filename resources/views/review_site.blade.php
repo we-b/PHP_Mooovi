@@ -15,6 +15,7 @@
             <li class="logo" style="float: left">
               <a href="/">mooovi</a>
             </li>
+            @if (Auth::check())
             <li class="entry_button">
               <a href="{{ route('logout') }}"
                   onclick="event.preventDefault();
@@ -26,8 +27,19 @@
               </form>
             </li>
             <li class="entry_button" style="float: right">
+              <a href="/users/{{ Auth::user()->id }}">マイページ</a>
+            </li>
+            <li class="entry_button" style="float: right">
               <a href="/products/search">投稿する</a>
             </li>
+            @else
+            <li class="entry_button" style="float: right">
+              <a href="/register">新規登録</a>
+            </li>
+            <li class="entry_button" style="float: right">
+              <a href="/login">ログイン</a>
+            </li>
+            @endif
           </ul>
         </div>
       </nav>

@@ -28,7 +28,9 @@ class AddColumnsToProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            //
+            $table->dropColumn('director');
+            $table->dropColumn('detail');
+            $table->dropColumn('open_date');
         });
     }
 }

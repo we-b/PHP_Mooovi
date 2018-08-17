@@ -5,7 +5,7 @@
   <header class="user_page-header">
     <div class="yjContainer">
       <a href="">
-        <div class="user_image"><img alt="Fix" src="{{ asset("storage/".Auth::user()->avatar) }}"></div>
+        <div class="user_image"><img alt="Fix" src="/storage/{{ Auth::user()->avatar }}"></div>
         <h2>テスト太郎<span>さんのマイページ</span></h2>
       </a>
     </div>

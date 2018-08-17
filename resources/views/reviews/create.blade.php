@@ -38,7 +38,7 @@
             </div>
           </div>
 
-          {!! Form::model($review, ['action' => ['ReviewsController@store', $product->id]]) !!}
+          {{ Form::model($review, ['action' => ['ReviewsController@store', $product->id]]) }}
             <div style="margin: 8px 0">
               {{ Form::label('rate', '評価', ['style' => 'margin-right: 8px;']) }}
               {{ Form::selectRange('rate', 1, 10, ['placeholder' => '評価', 'class' => 'search__query', 'style' => 'text-align: right;']) }}
@@ -51,7 +51,7 @@
                 {{ Form::submit('投稿する', ['class' => 'btn btn--block']) }}
               </div>
             </div>
-          {!! Form::close() !!}
+          {{ Form::close() }}
         </article>
       </div>
       <div id="yjSub">

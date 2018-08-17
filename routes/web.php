@@ -11,8 +11,9 @@
 |
 */
 
+Auth::routes();
 Route::get('/', 'ProductsController@index');
 Route::get('products/search', 'ProductsController@search');
 Route::resource('products.reviews', 'ReviewsController', ['only' => ['create', 'store']]);
 Route::resource('products', 'ProductsController', ['only' => 'show']);
-Auth::routes();
+Route::view('users/{user}', 'users.show');

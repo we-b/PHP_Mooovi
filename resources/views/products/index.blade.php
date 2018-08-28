@@ -14,9 +14,9 @@
                 </h2>
               </header>
               <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
-                @foreach ($products as $product)
+                {{-- @foreach ("hoges" as "hoge") --}}
                   <li class="col">
-                    <a href="/products/{{ $product->id }}"><div class="thumbnail__figure" style="background-image:url({{ $product->image_url }})"></div></a>
+                    <a href="/products/{hoge}"><div class="thumbnail__figure" style="background-image:url('hoge')"></div></a>
                     <div class="thumbnail__caption">
                       <h3 class="text-xsmall text-overflow" title="タイトル">
                         タイトル
@@ -28,7 +28,7 @@
                       </p>
                     </div>
                   </li>
-                @endforeach
+                {{-- @endforeach --}}
               </ul>
             </div>
           </article>

@@ -14,9 +14,9 @@
                 </h2>
               </header>
               <ul class="thumbnails thumbnail--movies row grid4 js-lazy-load-images js-my-check-stats" id="list-module">
-                {{-- @foreach ("hoges" as "hoge") --}}
+                {{-- @foreach ($products as $product) --}}
                   <li class="col">
-                    <a href="/products/{hoge}"><div class="thumbnail__figure" style="background-image:url('hoge')"></div></a>
+                    <a href="/products/{映画作品の番号}"><div class="thumbnail__figure" style="background-image:url({映画作品の画像URL})"></div></a>
                     <div class="thumbnail__caption">
                       <h3 class="text-xsmall text-overflow" title="タイトル">
                         タイトル

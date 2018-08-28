@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
       <title>映画レビューサイト</title>
-      <link href='{{ asset('/stylesheets/css/review_site.css') }}' rel='stylesheet' type='text/css'>
+      <link href='{{ asset('css/review_site.css') }}' rel='stylesheet' type='text/css'>
     </meta>
   </head>
   <body class="yj950-2">

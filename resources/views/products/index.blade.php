@@ -31,6 +31,7 @@
                 @endforeach
               </ul>
             </div>
+              {{ $products->links() }}
           </article>
         </div>
         <div id="yjSub">

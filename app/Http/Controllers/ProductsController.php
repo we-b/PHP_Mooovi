@@ -16,7 +16,7 @@ class ProductsController extends RankingController
 
     public function index()
     {
-        $products = Product::orderBy('id', 'ASC')->take(20)->get();
+        $products = Product::paginate(20);
         return view('products.index')->with('products', $products);
     }
 

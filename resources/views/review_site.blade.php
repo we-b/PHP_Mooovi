@@ -59,13 +59,8 @@
         </aside>
       </div>
     </div>
-  </div>
-</div>
-
-        <div class="copyright">
-          Copyright (C) 2015  XXX Corporation. All Rights Reserved.
-        </div>
-      </div>
+    <div class="copyright">
+      Copyright (C) 2015  XXX Corporation. All Rights Reserved.
     </div>
   </body>
 </html>

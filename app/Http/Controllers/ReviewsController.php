@@ -20,7 +20,7 @@ class ReviewsController extends RankingController
     public function create($product_id)
     {
         $product = Product::find($product_id);
-        return view('reviews.create')->with('review' => $review);
+        return view('reviews.create')->with('review', $review);
     }
 
     public function store(Request $request, $product_id)

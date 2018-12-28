@@ -35,13 +35,11 @@
           <div class="field">
             {{ Form::file('avatar') }}
           </div>
-
           <div class="submit">
           <div class="actions">
             {{ Form::submit('Create User', ['class' => 'btn btn--block']) }}
           </div></div>
-
-          {{ Form::close() }}
+        {{ Form::close() }}
 
           <div class="more_link_box">
           <strong>すでにアカウントを持っていますか？</strong>

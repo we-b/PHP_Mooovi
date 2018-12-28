@@ -17,17 +17,9 @@
             </li>
             @if (Auth::check())
             <li class="entry_button">
-              <a href="{{ route('logout') }}"
-                  onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();">
-                  サインアウト
-              </a>
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                  {{ csrf_field() }}
-              </form>
-            </li>
-            <li class="entry_button" style="float: right">
-              <a href="/users/{{ Auth::user()->id }}">マイページ</a>
+              {{ Form::open(['url' => "/logout", 'method' => 'post', 'id' => 'logout']) }}
+              {{ Form::close() }}
+              <a href="/logout" onclick="event.preventDefault(); document.getElementById('logout').submit();">サインアウト</a>
             </li>
             <li class="entry_button" style="float: right">
               <a href="/products/search">投稿する</a>

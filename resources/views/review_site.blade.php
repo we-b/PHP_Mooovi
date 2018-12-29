@@ -24,6 +24,9 @@
             <li class="entry_button" style="float: right">
               <a href="/products/search">投稿する</a>
             </li>
+            <li class="entry_button" style="float: right">
+              <a href="/users/{{ Auth::user()->id }}">マイページ</a>
+            </li>
             @else
             <li class="entry_button" style="float: right">
               <a href="/register">新規登録</a>

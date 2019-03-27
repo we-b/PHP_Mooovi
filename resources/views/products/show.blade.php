@@ -10,7 +10,7 @@
           <div class="container">
             <header class="header header--section">
               <h2 class="text-middle">
-                <i class="icon-movie color-gray-light"></i>{{ $product->title }}
+                <i class="fa fa-film icon-movie color-gray-light"></i>{{ $product->title }}
               </h2>
             </header>
             <p style="text-align: center">
@@ -21,7 +21,7 @@
             </div>
             <header class="header header--section">
               <h2 class="text-middle">
-                <i class="icon-movie color-gray-light"></i>みんなのレビュー
+                <i class="fa fa-users icon-movie color-gray-light"></i>みんなのレビュー
               </h2>
             </header>
             <ul style="padding: 0">

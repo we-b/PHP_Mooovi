@@ -10,7 +10,7 @@
           <div class="container">
             <header class="header header--section">
               <h2 class="text-middle">
-                <i class="icon-movie color-gray-light"></i>投稿
+                <i class="fa fa-pencil icon-movie color-gray-light"></i>投稿
               </h2>
             </header>
             <div>

@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <title>映画レビューサイト</title>
-  <link href="{{ asset('css/review_site.css')}}" rel='stylesheet' type='text/css'>
-  <link href="{{ asset('css/font-awesome.css')}}" rel='stylesheet' type='text/css'>
+  <link href="{{ asset('css/review_site.css') }}" rel='stylesheet' type='text/css'>
+  <link href="{{ asset('css/font-awesome.css') }}" rel='stylesheet' type='text/css'>
 </head>
 <body class="yj950-2">
 <div id="wrapper">
@@ -50,9 +50,9 @@
               </div>
             </a>
           </li>
-        @php
-          $i++;
-        @endphp
+          @php
+            $i++;
+          @endphp
         @endforeach
       </ul>
     </aside>
